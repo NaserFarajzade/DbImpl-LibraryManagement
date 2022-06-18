@@ -86,7 +86,7 @@ public class ShowBooks extends javax.swing.JFrame {
         Connection con = ConnectionProvider.getCon();
         Statement statement;
         try {
-            statement = con.createStatement();
+            statement = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             ResultSet resultSet = statement.executeQuery(selectBooksQuery);
             
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

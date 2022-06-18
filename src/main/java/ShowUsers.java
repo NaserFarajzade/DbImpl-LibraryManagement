@@ -91,7 +91,7 @@ public class ShowUsers extends javax.swing.JFrame {
         Connection con = ConnectionProvider.getCon();
         Statement statement;
         try {
-            statement = con.createStatement();
+            statement = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             ResultSet resultSet = statement.executeQuery(selectUsersQuery);
             
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

@@ -1,4 +1,5 @@
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -104,7 +105,13 @@ public class NewBookSpecification extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 73, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\new.jpg")); // NOI18N
+        String currentPath = null;
+        try {
+            currentPath = new java.io.File(".").getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        jLabel4.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\new.jpg")); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, -1));
 
         pack();
@@ -128,7 +135,7 @@ public class NewBookSpecification extends javax.swing.JFrame {
         String addBOOKSPECIFICATIONQuery = "insert into bookspecifications values('"+isbn+"','"+title+"','"+author+"','"+publisher+"')";
         
         Boolean hasPermision = false;
-        String isbnCheckQuery = "select * from books where isbn = "+ isbn;
+        String isbnCheckQuery = "select * from books where isbn = '"+ isbn + "'";
         
         Connection con = ConnectionProvider.getCon();
         Statement statement;

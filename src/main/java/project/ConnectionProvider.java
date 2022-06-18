@@ -6,12 +6,9 @@ public class ConnectionProvider {
 
     public static Connection getCon(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
             Connection con = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/lms" , 
-                            "root" ,
-                            "123456"
-                    );
+                    .getConnection("jdbc:postgresql://127.0.0.1:5432/lms" , "postgres" , "123456");
             return con;
             
         }catch(Exception e){

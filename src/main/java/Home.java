@@ -1,3 +1,4 @@
+import java.io.IOException;
 
 public class Home extends javax.swing.JFrame {
 
@@ -8,6 +9,12 @@ public class Home extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        String currentPath = null;
+        try {
+            currentPath = new java.io.File(".").getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -23,7 +30,7 @@ public class Home extends javax.swing.JFrame {
         setLocation(new java.awt.Point(200, 100));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\member-add-on-300x300.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\member-add-on-300x300.png")); // NOI18N
         jButton1.setText("add student");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -32,7 +39,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 170, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\New book.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\New book.png")); // NOI18N
         jButton2.setText("add book");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,7 +48,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 170, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\books.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\books.png")); // NOI18N
         jButton3.setText("list of books");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +57,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, 170, -1));
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\department.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\department.png")); // NOI18N
         jButton4.setText("add department");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +66,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 170, 60));
 
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\issue.png")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\issue.png")); // NOI18N
         jButton5.setText("add book info");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +75,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 170, -1));
 
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\manage.jpg")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\manage.jpg")); // NOI18N
         jButton6.setText("managment");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +84,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 170, -1));
 
-        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\users.png")); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\users.png")); // NOI18N
         jButton7.setText("list of students");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +93,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 170, -1));
 
-        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\Icon 1\\Statics.png")); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\Icon 1\\Statics.png")); // NOI18N
         jButton8.setText("statistics");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +102,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 170, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\library2.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\library2.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

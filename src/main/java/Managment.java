@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -86,7 +87,14 @@ public class Managment extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 150, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\naser farajzade\\Pictures\\library project\\new.jpg")); // NOI18N
+        String currentPath = null;
+        try {
+            currentPath = new java.io.File(".").getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(currentPath + "\\library project\\new.jpg")); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, -1));
 
         pack();
